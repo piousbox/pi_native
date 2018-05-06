@@ -6,10 +6,6 @@
 
 *Brought to you by [NativeBase](https://nativebase.io/)*
 
-
-![Native-Starter-Kit](/Screenshots/logo.png)
-
-
 #### A simple starter project for [React Native](https://facebook.github.io/react-native/docs/getting-started.html) + [NativeBase](https://nativebase.io/) + [React Navigation](https://reactnavigation.org/) + [Redux](http://redux.js.org) + [CodePush](https://github.com/Microsoft/react-native-code-push) apps on iOS and Android.
 **Note:** Shifted to [React Navigation](https://reactnavigation.org/) from [React Native Router Flux](https://github.com/aksonov/react-native-router-flux) in the master branch. [React Navigation](https://reactnavigation.org/) has become standard for navigation solution in [React Native](https://facebook.github.io/react-native/docs/getting-started.html). We are just keeping up with the current trend.
 
@@ -24,7 +20,6 @@ This is a starter kit that you can install on the fly to get the basic plumbing 
 -	[Screens](#screens)
 -	[Technologies](#technologies)
 -	[Get Started](#get-started)
-
 
 ## Screens
 
@@ -109,25 +104,17 @@ This is a [React Native](https://github.com/facebook/react-native) Project with 
 
 
 ## Get Started
-
 ### 1. System Requirements
-
 * Globally installed [node](https://nodejs.org/en/)
-
 * Globally installed [react-native CLI](https://facebook.github.io/react-native/docs/getting-started.html)
-
 * Install [CodePush](https://microsoft.github.io/code-push/) globally and get keys for your app.
 
-
 ### 2. Installation
-
 On the command prompt run the following commands
 
 ```sh
 $ git clone https://github.com/start-react/native-starter-kit.git
-
 $ cd native-starter-kit/
-
 $ npm install
 ```
 
@@ -137,35 +124,22 @@ $ react-native link
 
 [CodePush](https://github.com/Microsoft/react-native-code-push) plugin installation and key deployment.
 
-
 ### 3. Simulate for iOS
-
 **Method One**
-
 *	Open the project in XCode from **ios/NativeStarterKit.xcodeproj**
-
 *	Hit the play button.
 
-
 **Method Two**
-
 *	Run the following command in your terminal
-
 ```sh
 $ react-native run-ios
 ```
 
 ### 4. Simulate for Android
-
 *	Make sure you have an **Android emulator** installed and running.
-
 *	Run the following command in your terminal
+ react-native run-android
 
-```sh
-$ react-native run-android
-```
+# Develop
+ npm install -g react-devtools
 
-Note: If you are building Native Starter Kit for first time on your system, please follow Method One to simulate on iOS. (To link the CodePush plugin through Xcode for iOS)
-
-
-For apps with more advance designs, please visit **[NativeBase Market](https://market.nativebase.io/)**.

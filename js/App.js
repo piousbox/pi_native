@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { StyleSheet } from "react-native";
-import CodePush from "react-native-code-push";
+import React, { Component } from "react"
+import { StyleSheet } from "react-native"
+import CodePush from "react-native-code-push"
 
-import { Container, Content, Text, View } from "native-base";
-import Modal from "react-native-modalbox";
-import MainStackRouter from "./Routers/MainStackRouter";
-import ProgressBar from "./components/loaders/ProgressBar";
+import { Container, Content, Text, View } from "native-base"
+import Modal from "react-native-modalbox"
+import MainStackRouter from "./Routers/MainStackRouter"
+import ProgressBar from "./components/loaders/ProgressBar"
 
-import theme from "./themes/base-theme";
+import theme from "./themes/base-theme"
 
 const styles = StyleSheet.create({
   container: {
@@ -22,16 +22,16 @@ const styles = StyleSheet.create({
   modal1: {
     height: 300
   }
-});
+})
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       showDownloadingModal: false,
       showInstalling: false,
       downloadProgress: 0
-    };
+    }
   }
 
   componentDidMount() {
@@ -40,24 +40,24 @@ class App extends Component {
       status => {
         switch (status) {
           case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
-            this.setState({ showDownloadingModal: true });
-            this._modal.open();
-            break;
+            this.setState({ showDownloadingModal: true })
+            this._modal.open()
+            break
           case CodePush.SyncStatus.INSTALLING_UPDATE:
-            this.setState({ showInstalling: true });
-            break;
+            this.setState({ showInstalling: true })
+            break
           case CodePush.SyncStatus.UPDATE_INSTALLED:
-            this._modal.close();
-            this.setState({ showDownloadingModal: false });
-            break;
+            this._modal.close()
+            this.setState({ showDownloadingModal: false })
+            break
           default:
-            break;
+            break
         }
       },
       ({ receivedBytes, totalBytes }) => {
-        this.setState({ downloadProgress: receivedBytes / totalBytes * 100 });
+        this.setState({ downloadProgress: receivedBytes / totalBytes * 100 })
       }
-    );
+    )
   }
 
   render() {
@@ -71,9 +71,7 @@ class App extends Component {
             <Modal
               style={[styles.modal, styles.modal1]}
               backdrop={false}
-              ref={c => {
-                this._modal = c;
-              }}
+              ref={c => { this._modal = c }}
               swipeToClose={false}
             >
               <View
@@ -124,11 +122,11 @@ class App extends Component {
             </Modal>
           </Content>
         </Container>
-      );
+      )
     }
 
-    return <MainStackRouter />;
+    return <MainStackRouter />
   }
 }
 
-export default App;
+export default App
