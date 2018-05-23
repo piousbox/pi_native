@@ -35,7 +35,7 @@ class Home extends React.Component<Props, State> {
             </Button>
           </Left>
           <Body>
-            <Title>Home</Title>
+            <Title>Home $cr33n</Title>
           </Body>
           <Right />
         </Header>
@@ -53,6 +53,7 @@ class Home extends React.Component<Props, State> {
               </ListItem>
             ))}
           </List>
+          { this.props.children }
         </Content>
       </Container>
     );

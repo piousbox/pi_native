@@ -18,14 +18,6 @@
     "jest-expo": "^24.0.0",
     "react-test-renderer": "16.2.0"
   },
-  "scripts": {
-    "start": "react-native start",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "test": "yarn jest && flow && eslint .",
-    "jest": "node node_modules/jest/bin/jest.js",
-    "precommit": "yarn test"
-  },
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
@@ -37,6 +29,7 @@
     "native-base": "2.3.5",
     "react": "16.2.0",
     "react-native": "0.51.0",
+    "react-native-newsitems": "file:../react-native-newsitems",
     "react-navigation": "1.0.0-beta.21",
     "react-redux": "5.0.6",
     "redux": "3.7.2",
@@ -45,5 +38,13 @@
     "redux-thunk": "2.2.0",
     "remote-redux-devtools": "0.5.0",
     "remote-redux-devtools-on-debugger": "^0.8.0"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "NODE_PATH=../ react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "yarn jest && flow && eslint .",
+    "jest": "node node_modules/jest/bin/jest.js",
+    "precommit": "yarn test"
   }
 }
