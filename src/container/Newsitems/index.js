@@ -22,7 +22,10 @@ class Newsitems extends React.Component<Props, State> {
         <View key={idx}>
           <Card >
             <View style={{paddingBottom: 10}} >
-              <Text >{i.name}</Text>
+              <Text onPress={() => {
+                console.log('+++ title pressed')
+                this.props.navigation.navigate('Report')
+              }} >{i.name}</Text>
             </View>
           </Card>
         </View>
