@@ -4,7 +4,8 @@
 There are @TODO where I'm hardcoding things.
 
 skip husky
- git commit --no-verify and git push --no-verify should work?
+ git commit --no-verify
+ git push --no-verify
 
 Refresh without shaking
  adb shell input keyevent KEYCODE_MENU
