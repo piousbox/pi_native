@@ -5,6 +5,7 @@ import { Text } from 'native-base'
 import Home from "../../stories/screens/Home"
 import datas from "./data"
 import { fetchList, fetchNewsitems } from "./actions"
+
 export interface Props {
   navigation: any,
   fetchList: Function,
@@ -21,10 +22,11 @@ class HomeContainer extends React.Component<Props, State> {
     this.props.fetchNewsitems()
   }
   render() {
-    console.log('+++ HomeContainer:', this.props, this.state)
+    // console.log('+++ HomeContainer:', this.props, this.state)
+
     return (
       <Home navigation={this.props.navigation} list={[]} >
-        <Newsitems items={this.props.data} />
+        <Newsitems items={this.props.data} navigation={this.props.navigation} />
       </Home>
     )
   }

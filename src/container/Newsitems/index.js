@@ -1,3 +1,7 @@
+/**
+ * container / Newsitems / index.js
+ */
+
 // @flow
 import * as React from "react"
 import { 
@@ -14,7 +18,7 @@ import { Card } from 'react-native-elements'
 
 class Newsitems extends React.Component<Props, State> {
   render () {
-    console.log('+++ Newsitems:', this.props, this.state)
+    // console.log('+++ Newsitems:', this.props, this.state)
     if (this.props.items.length === 0) { return (null) }
 
     let newsitems = this.props.items.map((i, idx) => {
@@ -23,16 +27,13 @@ class Newsitems extends React.Component<Props, State> {
           <Card >
             <View style={{paddingBottom: 10}} >
               <Text onPress={() => {
-                console.log('+++ title pressed')
-                this.props.navigation.navigate('Report')
+                this.props.navigation.navigate('Report', { reportname: i.reportname })
               }} >{i.name}</Text>
             </View>
           </Card>
         </View>
       )
     })
-
-    console.log('+++ n:', newsitems)
 
     return (
       <Container>
