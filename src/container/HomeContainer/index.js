@@ -15,6 +15,7 @@ class HomeContainer extends React.Component<Props, State> {
 		this.props.fetchList(datas);
 	}
 	render() {
+    console.log('+++ HomeContainer:', this.props, this.state)
 		return <Home navigation={this.props.navigation} list={this.props.data} />;
 	}
 }

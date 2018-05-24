@@ -13,7 +13,7 @@ export default function(state: any = initialState, action: Function) {
 	if (action.type === "LIST_IS_LOADING") {
 		return {
 			...state,
-			isLoading: action.isLoading,
+      isLoading: action.isLoading,
 		};
 	}
 	return state;

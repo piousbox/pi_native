@@ -4,38 +4,41 @@ import { connect } from "react-redux"
 import { Text } from 'native-base'
 import Home from "../../stories/screens/Home"
 import datas from "./data"
-import { fetchList } from "./actions"
+import { fetchList, fetchNewsitems } from "./actions"
 export interface Props {
-	navigation: any,
-	fetchList: Function,
-	data: Object,
+  navigation: any,
+  fetchList: Function,
+  data: Object,
 }
 export interface State {}
 
 // import { NewsitemReport } from 'react-native-newsitems'
-import { NewsitemReport } from '../Newsitems'
+import { Newsitems, NewsitemReport } from '../Newsitems'
 
-class HomeContainer extends React.Component<Props, State> {
-	componentDidMount() {
-		this.props.fetchList(datas);
-	}
-	render() {
-		return (
-			<Home navigation={this.props.navigation} list={this.props.data} >
-			  <NewsitemReport item={{ name: 'Report Name 2' }} />
-			</Home>
-		)
-	}
+class Home2Container extends React.Component<Props, State> {
+  componentDidMount() {
+    // this.props.fetchList(datas)
+    this.props.fetchNewsitems()
+  }
+  render() {
+    console.log('+++ Home2Container:', this.props, this.state)
+    return (
+      <Home navigation={this.props.navigation} list={[]} >
+        { /* <Newsitems /> */ }
+      </Home>
+    )
+  }
 }
 
 function bindAction(dispatch) {
-	return {
-		fetchList: url => dispatch(fetchList(url)),
-	};
+  return {
+    fetchList: url => dispatch(fetchList(url)),
+    fetchNewsitems: () => { dispatch(fetchNewsitems()) },
+  };
 }
 
 const mapStateToProps = state => ({
-	data: state.homeReducer.list,
-	isLoading: state.homeReducer.isLoading,
+  data: state.homeReducer.list,
+  isLoading: state.homeReducer.isLoading,
 });
-export default connect(mapStateToProps, bindAction)(HomeContainer);
+export default connect(mapStateToProps, bindAction)(Home2Container);
