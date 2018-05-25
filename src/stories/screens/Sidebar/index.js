@@ -30,6 +30,7 @@ export default class Sidebar extends React.Component<Props, State> {
 		return (
 			<Container>
 				<Content>
+          <Text>Pi-sidebar</Text>
 					<List
 						style={{ marginTop: 40 }}
 						dataArray={routes}

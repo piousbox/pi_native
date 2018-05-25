@@ -1,4 +1,8 @@
-import * as React from "react";
+/**
+ * screens / Report / index.js
+ */
+
+import * as React from "react"
 import {
   Container,
   Header,
@@ -12,18 +16,22 @@ import {
   Right,
   List,
   ListItem
-} from "native-base";
-
-import styles from "./styles";
+} from "native-base"
+import { 
+  ScrollView, Dimensions,
+} from 'react-native'
 export interface Props {
   navigation: any;
   list: any;
 }
-export interface State {}
-class Home extends React.Component<Props, State> {
+import HTML from 'react-native-render-html'
+
+class ReportScreen extends React.Component<Props, State> {
   render() {
+    let r = this.props.item
+
     return (
-      <Container style={styles.container}>
+      <Container >
         <Header>
           <Left>
             <Button transparent>
@@ -37,29 +45,22 @@ class Home extends React.Component<Props, State> {
             </Button>
           </Left>
           <Body>
-            <Title>Home $cr33n</Title>
+            <Title>Report... </Title>
           </Body>
           <Right />
         </Header>
         <Content>
-          <List>
-            {this.props.list.map((item, i) => (
-              <ListItem
-                key={i}
-                onPress={() =>
-                  this.props.navigation.navigate("BlankPage", {
-                    name: { item }
-                  })}
-              >
-                <Text>{item}</Text>
-              </ListItem>
-            ))}
-          </List>
+          <ScrollView>
+            <Text 
+              style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center', flex: 1 }}
+            >{r.name}</Text>
+            <HTML html={r.description} imagesMaxWidth={Dimensions.get('window').width} />
+          </ScrollView>
           { this.props.children }
         </Content>
       </Container>
-    );
-  }
+    )
+  } 
 }
 
-export default Home;
+export default ReportScreen

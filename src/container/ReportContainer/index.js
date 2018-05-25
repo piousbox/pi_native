@@ -19,6 +19,7 @@ import { connect } from "react-redux"
 import HTML from 'react-native-render-html'
 
 import { fetchReport } from "./actions"
+import ReportScreen from '../../stories/screens/Report'
 
 class Report extends React.Component<Props, State> {
   componentDidMount() {
@@ -31,14 +32,7 @@ class Report extends React.Component<Props, State> {
     if (!r) { return (null) }
 
     return (
-      <Container>
-        <ScrollView>
-          <Text 
-            style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center', flex: 1 }}
-          >{r.name}</Text>
-          <HTML html={r.description} imagesMaxWidth={Dimensions.get('window').width} />
-        </ScrollView>
-      </Container>
+      <ReportScreen item={r} />
     )
   }
 }

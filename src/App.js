@@ -12,9 +12,11 @@ import Sidebar from "./container/SidebarContainer"
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
+    Login: { screen: Login },
+    Sidebar: { screen: Sidebar },
 	},
 	{
-		initialRouteName: "Home",
+		initialRouteName: "Sidebar",
 		contentComponent: props => <Sidebar {...props} />,
 	}
 );
@@ -24,18 +26,12 @@ const App = StackNavigator(
 		Login: { screen: Login },
 		BlankPage: { screen: BlankPage },
 		Drawer: { screen: Drawer },
-		Home: { 
-			screen: Home,
-			path: 'nothing',
-			navigationOptions: ({navigation}) => ({
-				title: 'irrelevant-nww-title',
-			}),
-		},
+		Home: { screen: Home, },
     Report: { screen: Report },
 	},
 	{
 		initialRouteName: "Home",
-		headerMode: "none",
+		// headerMode: "none",
 	}
 );
 
