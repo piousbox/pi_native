@@ -1,4 +1,4 @@
-package com.reactnativeseed;
+package com.piousbox;
 
 import android.app.Application;
 

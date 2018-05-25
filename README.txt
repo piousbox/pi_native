@@ -33,3 +33,19 @@ const DevMenuTrigger = ({children}) => {
 
 AppRegistry.registerComponent('myApp', (): any => <DevMenuTrigger><MyApp></DevMenuTrigger>);
 </pre>
+
+# Release
+From: https://facebook.github.io/react-native/docs/signed-apk-android.html
+From: https://facebook.github.io/react-native/docs/signed-apk-android.html
+
+ keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+ ./gradlew assembleRelease
+ # react-native run-android --variant=release
+
+
+
+
+
+
+
+

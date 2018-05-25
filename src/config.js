@@ -1,7 +1,10 @@
 
 let config = {
   // envName: "development",
-  apiUrl: "https://ccf11dc1.ngrok.io",
+
+  // apiUrl: "https://ccf11dc1.ngrok.io",
+  apiUrl: "https://manager.piousbox.com",
+
   // fbAppId: "155288885040689",
   // googleAnalytics: "UA-53077236-3",
   domain: "wasya.co",

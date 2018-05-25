@@ -24,9 +24,7 @@ export function fetchNewsitemsSuccess(list: Object) {
 }
 
 export function fetchNewsitems(url: any) {
-  return dispatch => {    
-    // const url = "https://manager.piousbox.com/api/sites/view/piousbox.com.json"
-    // const url = "https://ccf11dc1.ngrok.io/api/sites/view/wasya.co.json" // @TODO: remove
+  return dispatch => {
     const url = `${config.apiUrl}/api/sites/view/${config.domain}.json`
     fetch(url).then(r => r.json()).then(_data => {
       let these = _data.site.newsitems

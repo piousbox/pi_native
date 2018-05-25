@@ -1,0 +1,3 @@
+0.0.1 - could not deploy to app store
+0.0.2 - api version 26
+

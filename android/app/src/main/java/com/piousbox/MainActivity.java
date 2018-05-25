@@ -1,4 +1,4 @@
-package com.reactnativeseed;
+package com.piousbox;
 
 import com.facebook.react.ReactActivity;
 
