@@ -34,17 +34,20 @@ class ReportScreen extends React.Component<Props, State> {
     return (
       <Container style={styles.container} >
         <Header>
-          <Left>
+          <Left style={{ flex: 1, flexDirection: 'row' }}>
             <Button transparent
               onPress={() => {
                   console.log('+++ drawer open from Report', this.props)
                   this.props.navigation.navigate("DrawerOpen")
                 }}>
-              <Icon
-                active
-                name="menu"
-
-              />
+              <Icon active name="menu" />
+            </Button>
+            <Button transparent
+              onPress={() => {
+                  console.log('navigating pizza', this.props)
+                  this.props.navigation.navigate("DrawerOpen")
+                }}>
+              <Icon active name="pizza" />
             </Button>
           </Left>
           <Body>

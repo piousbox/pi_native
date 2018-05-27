@@ -44,7 +44,6 @@ class Home extends React.Component<Props, State> {
                 }}>
               <Icon active name="pizza" />
             </Button>
-
           </Left>
           <Body>
             <Title>Piousbox News</Title>
@@ -57,7 +56,7 @@ class Home extends React.Component<Props, State> {
               <ListItem
                 key={i}
                 onPress={() =>
-                  this.props.navigation.navigate("Reportw", {
+                  this.props.navigation.navigate("Report", {
                     name: { item }
                   })}
               >
