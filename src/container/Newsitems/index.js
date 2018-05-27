@@ -42,16 +42,7 @@ class Newsitems extends React.Component<Props, State> {
     })
 
     return (
-      <Container>
-        { /* <Header>
-          <Body>
-            <Title>This title 2</Title>
-          </Body>
-        </Header> */ }
-
-        <ScrollView>{ newsitems }</ScrollView>
-
-      </Container>
+      <ScrollView>{ newsitems }</ScrollView>
     )
   }
 }

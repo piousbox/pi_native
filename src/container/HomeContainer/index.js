@@ -26,7 +26,7 @@ class HomeContainer extends React.Component<Props, State> {
 
     return (
       <Home navigation={this.props.navigation} >
-        <Newsitems items={this.props.data} />
+        <Newsitems navigation={this.props.navigation} items={this.props.data} />
       </Home>
     )
   }

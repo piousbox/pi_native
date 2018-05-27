@@ -17,7 +17,7 @@ import {
   List,
   ListItem
 } from "native-base"
-import { Image } from 'react-native'
+import { Image, ScrollView, } from 'react-native'
 
 import styles from "./styles"
 export interface Props {
@@ -48,21 +48,8 @@ class Home extends React.Component<Props, State> {
           <Right />
         </Header>
         <Content>
-          { /* <List>
-            {this.props.list.map((item, i) => (
-              <ListItem
-                key={i}
-                onPress={() =>
-                  this.props.navigation.navigate("Report", {
-                    name: { item }
-                  }) } >
-                <Text>{item}</Text>
-                <Image source={{ uri: item.photo_url }}
-                  style={{ width: 100, height: 100 }} />
-              </ListItem>
-            ))}
-          </List> */ }
-          { this.props.children }
+          <ScrollView>{ this.props.children }</ScrollView>
+          <Text>&nbsp;</Text>
         </Content>
       </Container>
     );
