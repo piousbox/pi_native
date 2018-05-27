@@ -14,7 +14,7 @@ class Login extends React.Component<Props, State> {
 				<Header style={{ height: 200 }}>
 					<Body style={{ alignItems: "center" }}>
 						<Icon name="flash" style={{ fontSize: 104 }} />
-						<Title>ReactNativeSeed.com</Title>
+						<Title>Piousbox News</Title>
 						<View padder>
 							<Text style={{ color: Platform.OS === "ios" ? "#000" : "#FFF" }}>
 								Build Something Amazing
