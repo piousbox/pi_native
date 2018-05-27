@@ -14,7 +14,7 @@ import {
   ListItem
 } from "native-base";
 
-import styles from "./styles";
+import styles from "./styles"
 export interface Props {
   navigation: any;
   list: any;
@@ -25,19 +25,29 @@ class Home extends React.Component<Props, State> {
     return (
       <Container style={styles.container}>
         <Header>
-          <Left>
-            <Button transparent>
+          <Left style={{ flex: 1, flexDirection: 'row' }} >
+            <Button transparent
+              onPress={() => {
+                  console.log('navigating zzz...', this.props)
+                  this.props.navigation.navigate("DrawerOpen")
+                }}>
               <Icon
                 active
                 name="menu"
-                onPress={() => {
-                  this.props.navigation.navigate("DrawerOpen")
-                }}
+
               />
             </Button>
+            <Button transparent
+              onPress={() => {
+                  console.log('navigating zzz...', this.props)
+                  this.props.navigation.navigate("DrawerOpen")
+                }}>
+              <Icon active name="pizza" />
+            </Button>
+
           </Left>
           <Body>
-            <Title>Home $cr33n</Title>
+            <Title>Piousbox News</Title>
           </Body>
           <Right />
         </Header>
@@ -47,7 +57,7 @@ class Home extends React.Component<Props, State> {
               <ListItem
                 key={i}
                 onPress={() =>
-                  this.props.navigation.navigate("BlankPage", {
+                  this.props.navigation.navigate("Reportw", {
                     name: { item }
                   })}
               >

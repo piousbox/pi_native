@@ -39,6 +39,8 @@ export default class Sidebar extends React.Component<Props, State> {
 								<ListItem
 									button
 									onPress={() => {
+                    console.log('+++ navigating from sidebar', this.props)
+
 										data.route === "Login"
 											? this.props.navigation.dispatch(resetAction)
 											: this.props.navigation.navigate(data.route);

@@ -25,22 +25,25 @@ export interface Props {
   list: any;
 }
 import HTML from 'react-native-render-html'
+import styles from "./styles"
 
 class ReportScreen extends React.Component<Props, State> {
   render() {
     let r = this.props.item
 
     return (
-      <Container >
+      <Container style={styles.container} >
         <Header>
           <Left>
-            <Button transparent>
+            <Button transparent
+              onPress={() => {
+                  console.log('+++ drawer open from Report', this.props)
+                  this.props.navigation.navigate("DrawerOpen")
+                }}>
               <Icon
                 active
                 name="menu"
-                onPress={() => {
-                  this.props.navigation.navigate("DrawerOpen")
-                }}
+
               />
             </Button>
           </Left>

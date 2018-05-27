@@ -32,7 +32,7 @@ class Report extends React.Component<Props, State> {
     if (!r) { return (null) }
 
     return (
-      <ReportScreen item={r} />
+      <ReportScreen navigation={this.props.navigation} item={r} />
     )
   }
 }
