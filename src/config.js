@@ -5,9 +5,10 @@ let config = {
   // apiUrl: "https://ccf11dc1.ngrok.io",
   apiUrl: "https://manager.piousbox.com",
 
+  domain: "pi-mobile",
+
   // fbAppId: "155288885040689",
   // googleAnalytics: "UA-53077236-3",
-  domain: "wasya.co",
   // lang: "en",
   // disqusShortname: "local-pi",
   // staticDomain: "https://static.piousbox.com",
