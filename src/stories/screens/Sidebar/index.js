@@ -1,5 +1,8 @@
 import * as React from "react";
-import { Text, Container, List, ListItem, Content } from "native-base";
+import { 
+  Text, Container, List, ListItem, Content,
+  Body,
+} from "native-base";
 import { NavigationActions } from "react-navigation";
 
 const routes = [
@@ -7,14 +10,10 @@ const routes = [
 		route: "Home",
 		caption: "Home",
 	},
-	{
-		route: "BlankPage",
-		caption: "Blank Page",
+ {
+		route: "ViewConfig",
+		caption: "Config",
 	},
-	{
-		route: "Login",
-		caption: "Logout",
-	}
 ]
 
 export interface Props {
@@ -30,9 +29,9 @@ export default class Sidebar extends React.Component<Props, State> {
 		return (
 			<Container>
 				<Content>
-          <Text>Pi-sidebar (sidebar)</Text>
+          <Text style={{ padding: 20, }} >Piousbox News</Text>
 					<List
-						style={{ marginTop: 40 }}
+            style={{ paddingRight: 20 }}
 						dataArray={routes}
 						renderRow={data => {
 							return (

@@ -1,5 +1,5 @@
 /**
- * screens / Report / index.js
+ * screens / Config / index.js
  */
 
 import * as React from "react"
@@ -25,15 +25,11 @@ export interface Props {
   navigation: any;
   list: any;
 }
-import HTML from 'react-native-render-html'
 import { NavigationActions } from 'react-navigation'
 import styles from "./styles"
 
-class ReportScreen extends React.Component<Props, State> {
+class ConfigScreen extends React.Component<Props, State> {
   render() {
-    let r = this.props.item
-    console.log('+++ ReportScreen:', this.props)
-
     return (
       <Container style={styles.container} >
         <Header>
@@ -46,7 +42,7 @@ class ReportScreen extends React.Component<Props, State> {
             </Button>
           </Left>
           <Body>
-            { /* <Title>Read Report</Title> */ }
+            <Title>Config</Title>
           </Body>
           <Right />
         </Header>
@@ -54,12 +50,8 @@ class ReportScreen extends React.Component<Props, State> {
           <ScrollView>
             <Text 
               style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center', flex: 1 }}
-            >{r.name}</Text>
-            <Image source={{ uri: r.photo_url }} resizeMode={'contain'} 
-              style={{ width: '100%', height: 250 }} />
-            <HTML html={r.description} imagesMaxWidth={Dimensions.get('window').width} />
+            >Some config property</Text>
           </ScrollView>
-          { this.props.children }
           <Text>&nbsp;</Text>
         </Content>
       </Container>
@@ -67,4 +59,4 @@ class ReportScreen extends React.Component<Props, State> {
   } 
 }
 
-export default ReportScreen
+export default ConfigScreen

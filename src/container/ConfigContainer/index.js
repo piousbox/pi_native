@@ -1,5 +1,5 @@
 /**
- * ReportContainer / index.js
+ * ConfigContainer / index.js
  */
 
 // @flow
@@ -17,21 +17,17 @@ import {
 import { Card } from 'react-native-elements'
 import { connect } from "react-redux"
 
-import { fetchReport } from "./actions"
-import ReportScreen from '../../stories/screens/Report'
+import ConfigScreen from '../../stories/screens/Config'
 
-class Report extends React.Component<Props, State> {
+class Config extends React.Component<Props, State> {
   componentDidMount() {
     let reportname = this.props.navigation.state.params.reportname
-    this.props.fetchReport(reportname)
   }
   render () {
-    console.log('+++ Report:', this.props, this.state)
-    let r = this.props.report
-    if (!r) { return (null) }
+    console.log('+++ ConfigContainer:', this.props, this.state)
 
     return (
-      <ReportScreen navigation={this.props.navigation} item={r} />
+      <ConfigScreen navigation={this.props.navigation} />
     )
   }
 }
@@ -46,4 +42,5 @@ const mapStateToProps = state => ({
   report: state.homeReducer.report,
 })
 
-export default connect(mapStateToProps, bindAction)(Report)
+export default connect(mapStateToProps, bindAction)(Config)
+

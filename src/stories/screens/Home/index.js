@@ -25,7 +25,7 @@ class Home extends React.Component<Props, State> {
     return (
       <Container style={styles.container}>
         <Header>
-          <Left style={{ flex: 1, flexDirection: 'row' }} >
+          <Left style={{ flex: 0, flexDirection: 'row' }} >
             <Button transparent
               onPress={() => {
                   this.props.navigation.navigate("DrawerOpen")
@@ -38,7 +38,7 @@ class Home extends React.Component<Props, State> {
               />
             </Button>
           </Left>
-          <Body>
+          <Body style={{ width: '100%' }} >
             <Title>Piousbox News</Title>
           </Body>
           <Right />

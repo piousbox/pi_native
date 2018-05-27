@@ -8,6 +8,7 @@ import Home from './container/HomeContainer'
 import Report from './container/ReportContainer'
 import BlankPage from "./container/BlankPageContainer"
 import Sidebar from "./container/SidebarContainer"
+import Config from './container/ConfigContainer'
 
 const Drawer = DrawerNavigator(
   {
@@ -24,11 +25,12 @@ const Drawer = DrawerNavigator(
 
 const App = StackNavigator(
   {
-    Login: { screen: Login },
-    BlankPage: { screen: BlankPage },
-    Drawer: { screen: Drawer }, // I don't want it taking up the whole screen
+    // Login: { screen: Login },
+    // BlankPage: { screen: BlankPage },
+    Drawer: { screen: Drawer }, 
     Home: { screen: Home, },
     Report: { screen: Report },
+    Config: { screen: Config },
   },
   {
     initialRouteName: "Home",
