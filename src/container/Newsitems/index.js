@@ -18,7 +18,7 @@ import { Card } from 'react-native-elements'
 
 class Newsitems extends React.Component<Props, State> {
   render () {
-    console.log('+++ Newsitems Container:', this.props)
+    // console.log('+++ Newsitems Container:', this.props)
     if (this.props.items.length === 0) { return (null) }
 
     let newsitems = this.props.items.map((i, idx) => {
@@ -49,7 +49,7 @@ class Newsitems extends React.Component<Props, State> {
 
 class NewsitemReport extends React.Component<Props, State> {
   render () {
-    console.log('+++ NewsitemReport:', this.props, this.state)
+    // console.log('+++ NewsitemReport:', this.props, this.state)
 
     return (
       <View style={{ backgroundColor: 'yellow' }}>

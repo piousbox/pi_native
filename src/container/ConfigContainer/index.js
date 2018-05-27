@@ -24,7 +24,7 @@ class Config extends React.Component<Props, State> {
     let reportname = this.props.navigation.state.params.reportname
   }
   render () {
-    console.log('+++ ConfigContainer:', this.props, this.state)
+    // console.log('+++ ConfigContainer:', this.props, this.state)
 
     return (
       <ConfigScreen navigation={this.props.navigation} />

@@ -26,7 +26,7 @@ class Report extends React.Component<Props, State> {
     this.props.fetchReport(reportname)
   }
   render () {
-    console.log('+++ Report:', this.props, this.state)
+    // console.log('+++ Report:', this.props, this.state)
     let r = this.props.report
     if (!r) { return (null) }
 

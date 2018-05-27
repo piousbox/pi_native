@@ -32,7 +32,7 @@ import styles from "./styles"
 class ReportScreen extends React.Component<Props, State> {
   render() {
     let r = this.props.item
-    console.log('+++ ReportScreen:', this.props)
+    // console.log('+++ ReportScreen:', this.props)
 
     return (
       <Container style={styles.container} >

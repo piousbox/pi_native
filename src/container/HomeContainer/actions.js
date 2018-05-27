@@ -31,7 +31,7 @@ export function fetchNewsitems(url: any) {
       dispatch(fetchNewsitemsSuccess(these))
       dispatch(listIsLoading(false))
     }).catch(_e => {
-      console.log('+++ canot:', _e)
+      // console.log('+++ canot:', _e)
 
     })
   }
