@@ -25,8 +25,8 @@ class HomeContainer extends React.Component<Props, State> {
     // console.log('+++ HomeContainer:', this.props, this.state)
 
     return (
-      <Home navigation={this.props.navigation} list={[]} >
-        <Newsitems items={this.props.data} navigation={this.props.navigation} />
+      <Home navigation={this.props.navigation} >
+        <Newsitems items={this.props.data} />
       </Home>
     )
   }

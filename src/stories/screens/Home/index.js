@@ -1,3 +1,7 @@
+/**
+ * screens / Home
+ */
+
 import * as React from "react";
 import {
   Container,
@@ -12,7 +16,8 @@ import {
   Right,
   List,
   ListItem
-} from "native-base";
+} from "native-base"
+import { Image } from 'react-native'
 
 import styles from "./styles"
 export interface Props {
@@ -22,6 +27,7 @@ export interface Props {
 export interface State {}
 class Home extends React.Component<Props, State> {
   render() {
+    console.log('+++ HomeScreen:', this.props)
     return (
       <Container style={styles.container}>
         <Header>
@@ -29,12 +35,10 @@ class Home extends React.Component<Props, State> {
             <Button transparent
               onPress={() => {
                   this.props.navigation.navigate("DrawerOpen")
-                  // this.props.navigation.navigate("Sidebar")
                 }}>
               <Icon
                 active
                 name="menu"
-
               />
             </Button>
           </Left>
@@ -44,19 +48,20 @@ class Home extends React.Component<Props, State> {
           <Right />
         </Header>
         <Content>
-          <List>
+          { /* <List>
             {this.props.list.map((item, i) => (
               <ListItem
                 key={i}
                 onPress={() =>
                   this.props.navigation.navigate("Report", {
                     name: { item }
-                  })}
-              >
+                  }) } >
                 <Text>{item}</Text>
+                <Image source={{ uri: item.photo_url }}
+                  style={{ width: 100, height: 100 }} />
               </ListItem>
             ))}
-          </List>
+          </List> */ }
           { this.props.children }
         </Content>
       </Container>

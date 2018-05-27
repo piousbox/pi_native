@@ -5,7 +5,7 @@
 // @flow
 import * as React from "react"
 import { 
-  ScrollView,
+  ScrollView, Image,
 } from 'react-native'
 import { 
   Container, Header, Body,
@@ -18,7 +18,7 @@ import { Card } from 'react-native-elements'
 
 class Newsitems extends React.Component<Props, State> {
   render () {
-    // console.log('+++ Newsitems:', this.props, this.state)
+    console.log('+++ Newsitems Container:', this.props)
     if (this.props.items.length === 0) { return (null) }
 
     let newsitems = this.props.items.map((i, idx) => {
@@ -29,6 +29,12 @@ class Newsitems extends React.Component<Props, State> {
               <Text onPress={() => {
                 this.props.navigation.navigate('Report', { reportname: i.reportname })
               }} >{i.name}</Text>
+              <View style={{ flex: 1, flexDirection: 'row' }} >
+                <Image source={{ uri: i.photo_url }} style={{ width: 100, height: 100 }} />
+              
+                <Text style={{ flex: 1, alignSelf: 'stretch', paddingLeft: 5 }} 
+                  >On { i.created_at.substr(0, 10) } by {i.username}.</Text>
+              </View>
             </View>
           </Card>
         </View>
