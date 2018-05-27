@@ -25,6 +25,7 @@ export interface Props {
   list: any;
 }
 import HTML from 'react-native-render-html'
+import { NavigationActions } from 'react-navigation'
 import styles from "./styles"
 
 class ReportScreen extends React.Component<Props, State> {
@@ -37,14 +38,12 @@ class ReportScreen extends React.Component<Props, State> {
           <Left style={{ flex: 1, flexDirection: 'row' }}>
             <Button transparent
               onPress={() => {
-                  console.log('+++ drawer open from Report', this.props)
                   this.props.navigation.navigate("DrawerOpen")
                 }}>
               <Icon active name="menu" />
             </Button>
             <Button transparent
               onPress={() => {
-                  console.log('navigating pizza', this.props)
                   this.props.navigation.navigate("DrawerOpen")
                 }}>
               <Icon active name="pizza" />

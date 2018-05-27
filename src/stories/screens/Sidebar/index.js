@@ -14,8 +14,8 @@ const routes = [
 	{
 		route: "Login",
 		caption: "Logout",
-	},
-];
+	}
+]
 
 export interface Props {
 	navigation: any,
@@ -30,7 +30,7 @@ export default class Sidebar extends React.Component<Props, State> {
 		return (
 			<Container>
 				<Content>
-          <Text>Pi-sidebar</Text>
+          <Text>Pi-sidebar (sidebar)</Text>
 					<List
 						style={{ marginTop: 40 }}
 						dataArray={routes}
@@ -39,8 +39,6 @@ export default class Sidebar extends React.Component<Props, State> {
 								<ListItem
 									button
 									onPress={() => {
-                    console.log('+++ navigating from sidebar', this.props)
-
 										data.route === "Login"
 											? this.props.navigation.dispatch(resetAction)
 											: this.props.navigation.navigate(data.route);

@@ -12,8 +12,9 @@ import Sidebar from "./container/SidebarContainer"
 const Drawer = DrawerNavigator(
   {
     Home: { screen: Home },
-    Login: { screen: Login },
+    // Login: { screen: Login },
     Sidebar: { screen: Sidebar },
+    Report: { screen: Report },
   },
   {
     initialRouteName: "Sidebar",

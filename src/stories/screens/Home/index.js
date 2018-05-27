@@ -28,21 +28,14 @@ class Home extends React.Component<Props, State> {
           <Left style={{ flex: 1, flexDirection: 'row' }} >
             <Button transparent
               onPress={() => {
-                  console.log('navigating zzz...', this.props)
                   this.props.navigation.navigate("DrawerOpen")
+                  // this.props.navigation.navigate("Sidebar")
                 }}>
               <Icon
                 active
                 name="menu"
 
               />
-            </Button>
-            <Button transparent
-              onPress={() => {
-                  console.log('navigating zzz...', this.props)
-                  this.props.navigation.navigate("DrawerOpen")
-                }}>
-              <Icon active name="pizza" />
             </Button>
           </Left>
           <Body>
